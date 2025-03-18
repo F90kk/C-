@@ -1,0 +1,14 @@
+C:\Users\kovch\source\practice\18.03.2025\tasks6\bin\Debug\net9.0\tasks6.exe
+C:\Users\kovch\source\practice\18.03.2025\tasks6\bin\Debug\net9.0\tasks6.deps.json
+C:\Users\kovch\source\practice\18.03.2025\tasks6\bin\Debug\net9.0\tasks6.runtimeconfig.json
+C:\Users\kovch\source\practice\18.03.2025\tasks6\bin\Debug\net9.0\tasks6.dll
+C:\Users\kovch\source\practice\18.03.2025\tasks6\bin\Debug\net9.0\tasks6.pdb
+C:\Users\kovch\source\practice\18.03.2025\tasks6\obj\Debug\net9.0\tasks6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kovch\source\practice\18.03.2025\tasks6\obj\Debug\net9.0\tasks6.AssemblyInfoInputs.cache
+C:\Users\kovch\source\practice\18.03.2025\tasks6\obj\Debug\net9.0\tasks6.AssemblyInfo.cs
+C:\Users\kovch\source\practice\18.03.2025\tasks6\obj\Debug\net9.0\tasks6.csproj.CoreCompileInputs.cache
+C:\Users\kovch\source\practice\18.03.2025\tasks6\obj\Debug\net9.0\tasks6.dll
+C:\Users\kovch\source\practice\18.03.2025\tasks6\obj\Debug\net9.0\refint\tasks6.dll
+C:\Users\kovch\source\practice\18.03.2025\tasks6\obj\Debug\net9.0\tasks6.pdb
+C:\Users\kovch\source\practice\18.03.2025\tasks6\obj\Debug\net9.0\tasks6.genruntimeconfig.cache
+C:\Users\kovch\source\practice\18.03.2025\tasks6\obj\Debug\net9.0\ref\tasks6.dll

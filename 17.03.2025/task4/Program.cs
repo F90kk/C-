@@ -1,0 +1,14 @@
+﻿double v1;
+double t1;
+double v2; 
+double t2;
+Console.Write($"v1 = ");
+v1 = double.Parse(Console.ReadLine());
+Console.Write($"t1 = ");
+t1 = double.Parse(Console.ReadLine());
+Console.Write($"v2 = ");
+v2 = double.Parse(Console.ReadLine());
+Console.Write($"t2 = ");
+t2 = double.Parse(Console.ReadLine());
+Console.WriteLine($"Общий объём: {v1 + v2}");
+Console.WriteLine($"Температура смеси двух жидкостей при заданных значениях v1, t1, v2, t2: {(v1 * t1 + v2* t2) / (v1+ v2)}");
