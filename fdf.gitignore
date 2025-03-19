@@ -1,0 +1,5 @@
+*.docx
+*.zip
+*.doc 
+/*/.vs/
+/.vs/
