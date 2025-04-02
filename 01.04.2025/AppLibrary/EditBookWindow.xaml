@@ -1,0 +1,8 @@
+<Window x:Class="AppLibrary.EditBookWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Редактировать книгу" Height="300" Width="400">
+    <Grid>
+        <TextBlock Text="Окно редактирования книги" HorizontalAlignment="Center" VerticalAlignment="Center" />
+    </Grid>
+</Window>

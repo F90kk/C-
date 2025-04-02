@@ -1,0 +1,57 @@
+﻿<Window x:Class="LibraryApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:LibraryApp"
+        Title="Электронная библиотека" Height="450" Width="800">
+    <Window.InputBindings>
+        <KeyBinding Command="{Binding AddBookCommand}" Modifiers="Control" Key="N"/>
+        <KeyBinding Command="{Binding EditBookCommand}" Modifiers="Control" Key="E"/>
+        <KeyBinding Command="{Binding DeleteBookCommand}" Modifiers="Control" Key="D"/>
+    </Window.InputBindings>
+    <DockPanel>
+        <!-- Menu -->
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Command="{Binding AddBookCommand}" Header="Добавить книгу" InputGestureText="Ctrl+N"/>
+                <Separator/>
+                <MenuItem Header="Выход"/>
+            </MenuItem>
+            <MenuItem Header="Книги">
+                <MenuItem Command="{Binding EditBookCommand}" Header="Редактировать" InputGestureText="Ctrl+E"/>
+                <MenuItem Command="{Binding DeleteBookCommand}" Header="Удалить" InputGestureText="Ctrl+D"/>
+            </MenuItem>
+            <MenuItem Header="Поиск"/>
+            <MenuItem Header="Настройки"/>
+        </Menu>
+
+        <!-- Toolbar -->
+
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button Command="{Binding AddBookCommand}" ToolTip="Добавить книгу (Ctrl+N)">
+                    Добавить
+                </Button>
+                <Button Command="{Binding EditBookCommand}" ToolTip="Редактировать книгу (Ctrl+E)">
+                    Редактировать
+                </Button>
+                <Button Command="{Binding DeleteBookCommand}" ToolTip="Удалить книгу (Ctrl+D)">
+                    Удалить
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+
+        <!-- Main Content -->
+        <Grid>
+            <DataGrid ItemsSource="{Binding Books}" SelectedItem="{Binding SelectedBook, Mode=TwoWay}" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="SizeToHeader"/>
+                    <DataGridTextColumn Header="Название" Binding="{Binding Title}" Width="*"/>
+                    <DataGridTextColumn Header="Автор" Binding="{Binding Author}" Width="*" />
+                    <DataGridTextColumn Header="Год" Binding="{Binding Year}" Width="40"/>
+                    <DataGridTextColumn Header="Издательство" Binding="{Binding Publisher}" Width="*"/>
+                    <DataGridTextColumn Header="ISBN" Binding="{Binding ISBN}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </DockPanel>
+</Window>
