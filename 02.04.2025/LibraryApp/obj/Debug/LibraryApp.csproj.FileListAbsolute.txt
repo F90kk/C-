@@ -1,0 +1,17 @@
+C:\Users\kovch\source\practice\03.04.2025\LibraryApp\bin\Debug\LibraryApp.exe.config
+C:\Users\kovch\source\practice\03.04.2025\LibraryApp\bin\Debug\LibraryApp.exe
+C:\Users\kovch\source\practice\03.04.2025\LibraryApp\bin\Debug\LibraryApp.pdb
+C:\Users\kovch\source\practice\03.04.2025\LibraryApp\obj\Debug\LibraryApp.csproj.AssemblyReference.cache
+C:\Users\kovch\source\practice\03.04.2025\LibraryApp\obj\Debug\MainWindow.g.cs
+C:\Users\kovch\source\practice\03.04.2025\LibraryApp\obj\Debug\App.g.cs
+C:\Users\kovch\source\practice\03.04.2025\LibraryApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\kovch\source\practice\03.04.2025\LibraryApp\obj\Debug\LibraryApp_MarkupCompile.cache
+C:\Users\kovch\source\practice\03.04.2025\LibraryApp\obj\Debug\LibraryApp_MarkupCompile.lref
+C:\Users\kovch\source\practice\03.04.2025\LibraryApp\obj\Debug\MainWindow.baml
+C:\Users\kovch\source\practice\03.04.2025\LibraryApp\obj\Debug\LibraryApp.g.resources
+C:\Users\kovch\source\practice\03.04.2025\LibraryApp\obj\Debug\LibraryApp.Properties.Resources.resources
+C:\Users\kovch\source\practice\03.04.2025\LibraryApp\obj\Debug\LibraryApp.csproj.GenerateResource.cache
+C:\Users\kovch\source\practice\03.04.2025\LibraryApp\obj\Debug\LibraryApp.csproj.CoreCompileInputs.cache
+C:\Users\kovch\source\practice\03.04.2025\LibraryApp\obj\Debug\LibraryApp.exe
+C:\Users\kovch\source\practice\03.04.2025\LibraryApp\obj\Debug\LibraryApp.pdb
+C:\Users\kovch\source\practice\03.04.2025\LibraryApp\obj\Debug\App.baml

@@ -1,0 +1,73 @@
+﻿<Window x:Class="LibraryApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:LibraryApp"
+        Title="Электронная библиотека" Height="450" Width="800">
+    <Window.Resources>
+        <ControlTemplate x:Key="TakeButtonTemplate" TargetType="Button">
+            <Border Background="#4CAF50" CornerRadius="5" Padding="5">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="📚 " FontSize="16"/>
+                    <ContentPresenter VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </ControlTemplate>
+    </Window.Resources>
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Ввод новой книги -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,10">
+            <TextBox local:PlaceholderHelper.PlaceholderText="Название книги"
+                     Text="{Binding NewTitle, UpdateSourceTrigger=PropertyChanged}" 
+                     Margin="0,0,0,5"/>
+            <TextBox local:PlaceholderHelper.PlaceholderText="Автор"
+                     Text="{Binding NewAuthor, UpdateSourceTrigger=PropertyChanged}" 
+                     Margin="0,0,0,5"/>
+            <Button Content="Добавить книгу" 
+                    Click="AddBook_Click" 
+                    Margin="0,0,0,5"/>
+        </StackPanel>
+
+        <!-- Поиск -->
+        <TextBox Grid.Row="1" 
+                 local:PlaceholderHelper.PlaceholderText="Поиск по автору"
+                 Text="{Binding SearchAuthor, UpdateSourceTrigger=PropertyChanged}" 
+                 Margin="0,0,0,10"/>
+
+        <!-- Список книг -->
+        <ListBox Grid.Row="2" ItemsSource="{Binding BooksViewSource.View}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel>
+                            <TextBlock Text="{Binding Title}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Author}"/>
+                            <TextBlock Text="{Binding IsAvailable, 
+                                    Converter={StaticResource BooleanToStringConverter}, 
+                                    ConverterParameter='В наличии|Занята'}"/>
+                        </StackPanel>
+
+                        <Button Grid.Column="1" 
+                                Content="{Binding IsAvailable, 
+                                        Converter={StaticResource BooleanToStringConverter}, 
+                                        ConverterParameter='Взять|Вернуть'}" 
+                                Template="{StaticResource TakeButtonTemplate}"
+                                Click="TakeBook_Click"
+                                Margin="10,0,0,0"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>
