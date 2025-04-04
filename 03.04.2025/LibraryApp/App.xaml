@@ -1,0 +1,11 @@
+﻿<Application x:Class="LibraryApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:LibraryApp"
+             xmlns:converter="clr-namespace:LibraryApp.Converter"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <converter:BooleanToStringConverter x:Key="BooleanToStringConverter" />
+        <converter:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </Application.Resources>
+</Application>
