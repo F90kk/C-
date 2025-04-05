@@ -1,0 +1,44 @@
+﻿<Window x:Class="LibraryApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Электронная библиотека" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="5">
+            <TextBox x:Name="SearchTextBox" 
+                     Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}" 
+                     Margin="0,0,0,5" 
+                     TextChanged="SearchTextBox_TextChanged"/>
+            <Button Content="Добавить книгу" Command="{Binding AddBookCommand}"/>
+        </StackPanel>
+
+        <ListView Grid.Row="1" ItemsSource="{Binding Books}" Margin="5">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Title}"/>
+                    <GridViewColumn Header="Автор" DisplayMemberBinding="{Binding Author}"/>
+                    <GridViewColumn Header="Год" DisplayMemberBinding="{Binding Year}"/>
+                    <GridViewColumn Header="Прогресс" DisplayMemberBinding="{Binding UploadProgress, StringFormat={}{0}%}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Grid Grid.Row="2" Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <ListBox ItemsSource="{Binding ChatMessages}" Height="100" Margin="0,0,5,0"/>
+            <StackPanel Grid.Column="1">
+                <TextBox Text="{Binding ChatMessage}" Width="200"/>
+                <Button Content="Отправить" Command="{Binding SendMessageCommand}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
