@@ -1,0 +1,47 @@
+[
+  {
+    "Title": null,
+    "Author": null,
+    "Year": 0,
+    "FilePath": null,
+    "UploadProgress": 0.0,
+    "DateAdded": "2025-04-06T19:35:23.4226117+03:00",
+    "Description": null
+  },
+  {
+    "Title": null,
+    "Author": null,
+    "Year": 0,
+    "FilePath": null,
+    "UploadProgress": 0.0,
+    "DateAdded": "2025-04-06T19:35:23.4226117+03:00",
+    "Description": null
+  },
+  {
+    "Title": "Биба и Боба",
+    "Author": "Я",
+    "Year": 2025,
+    "FilePath": "C:\\Users\\kovch\\source\\practice\\06.04.2025\\ElectronicLibrary\\bin\\Debug",
+    "UploadProgress": 100.0,
+    "DateAdded": "2025-04-06T19:36:25.338386+03:00",
+    "Description": "Описание типо тут есть да"
+  },
+  {
+    "Title": "Fef",
+    "Author": "df",
+    "Year": 123,
+    "FilePath": "C:\\Users\\kovch\\source\\practice\\06.04.2025\\ElectronicLibrary\\bin\\Debug\\book.txt",
+    "UploadProgress": 100.0,
+    "DateAdded": "2025-04-06T23:05:29.671638+03:00",
+    "Description": "123"
+  },
+  {
+    "Title": "фываф",
+    "Author": "фывафвыа",
+    "Year": 324,
+    "FilePath": "фывавфы",
+    "UploadProgress": 100.0,
+    "DateAdded": "2025-04-06T23:10:12.5806453+03:00",
+    "Description": "ацкпацкууайцуфкавфцукафцкцайфы"
+  }
+]
