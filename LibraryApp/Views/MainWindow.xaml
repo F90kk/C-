@@ -1,0 +1,45 @@
+﻿<Window x:Class="LibraryApp.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:LibraryApp.ViewModels"
+        Title="Электронная библиотека" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
+            <TextBox Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}" Width="150" Margin="0,0,5,0"/>
+            <Button Content="Добавить книгу" Command="{Binding AddBookCommand}" Margin="0,0,5,0"/>
+        </StackPanel>
+
+        <ListBox Grid.Row="1" ItemsSource="{Binding Books}" 
+                 MouseDoubleClick="ListBox_MouseDoubleClick" 
+                 Margin="5">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Title}"/>
+                        <TextBlock Text="{Binding Author}"/>
+                        <TextBlock Text="{Binding Genre}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="5">
+            <ComboBox ItemsSource="{Binding Books}" SelectedItem="{Binding LoansViewModel.SelectedBook}" Width="150" Margin="0,0,5,0">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Title}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <TextBox Text="{Binding LoansViewModel.Borrower}" Width="100" Margin="0,0,5,0"/>
+            <Button Content="Взять книгу" Command="{Binding LoansViewModel.BorrowBookCommand}"/>
+            <Button Content="Вернуть книгу" Command="{Binding LoansViewModel.ReturnBookCommand}" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
