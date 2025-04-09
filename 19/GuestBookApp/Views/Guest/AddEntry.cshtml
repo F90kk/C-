@@ -1,0 +1,18 @@
+﻿@model GuestBookApp.Models.GuestViewModel
+
+<h2>Добавить отзыв</h2>
+<form asp-action="AddEntry" method="post">
+    <div>
+        <label asp-for="NewEntry.Name">Имя:</label>
+        <input asp-for="NewEntry.Name" />
+        <span asp-validation-for="NewEntry.Name"></span>
+    </div>
+    <div>
+        <label asp-for="NewEntry.Message">Сообщение:</label>
+        <textarea asp-for="NewEntry.Message"></textarea>
+        <span asp-validation-for="NewEntry.Message"></span>
+    </div>
+    <div>
+        <input type="submit" value="Добавить" />
+    </div>
+</form>
