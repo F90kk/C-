@@ -1,0 +1,36 @@
+﻿@using GuestBookApp.Models
+@model IEnumerable<GuestEntry>
+@{
+    ViewData["Title"] = "Последние отзывы";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (TempData["FeedbackMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["FeedbackMessage"]
+    </div>
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Отзыв</th>
+            <th>Дата</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Message</td>
+                <td>@item.Date.ToString("g")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create", "Guest")" class="btn btn-primary">Добавить отзыв</a>
