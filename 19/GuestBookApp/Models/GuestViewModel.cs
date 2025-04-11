@@ -1,5 +1,4 @@
-﻿// Models/GuestViewModel.cs
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using GuestBookApp.Models;
 
 namespace GuestBookApp.Models

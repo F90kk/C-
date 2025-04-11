@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E61HIww3Pw8=",
+  "dgSpecHash": "AFB/XG2fT6k=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kovch\\source\\practice\\20 ASP.NET Core\\GuestBookApp\\GuestBookApp.csproj",
+  "projectFilePath": "C:\\Users\\kovch\\source\\practice\\21 ASP.NET Core\\GuestBookApp\\GuestBookApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kovch\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.4\\microsoft.entityframeworkcore.9.0.4.nupkg.sha512",
     "C:\\Users\\kovch\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.4\\microsoft.entityframeworkcore.abstractions.9.0.4.nupkg.sha512",

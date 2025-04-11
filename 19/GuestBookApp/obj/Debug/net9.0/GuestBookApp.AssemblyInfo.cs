@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GuestBookApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6917ee37dc1b5304d0c3d6f8df3b3c51c0d4b88d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+791f23cc25b0ef5c298daa86415e3141847f2d6a")]
 [assembly: System.Reflection.AssemblyProductAttribute("GuestBookApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GuestBookApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

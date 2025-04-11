@@ -1,12 +1,9 @@
-﻿<!-- Views/Guest/Recent.cshtml -->
-@model GuestBookApp.Models.GuestViewModel;
+﻿@model GuestBookApp.Models.GuestViewModel;
 
 <h2>Последние отзывы</h2>
 
-<!-- Кнопка для открытия модального окна со всеми комментариями -->
 <button id="showAllCommentsButton" onclick="showAllComments()">Показать все комментарии</button>
 
-<!-- Модальное окно для отображения всех комментариев -->
 <div id="commentsModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5);">
     <div style="background: white; width: 50%; margin: 50px auto; padding: 20px; position: relative;">
         <h3>Все комментарии</h3>
@@ -23,10 +20,8 @@
     </div>
 </div>
 
-<!-- Кнопка для показа формы -->
 <button id="toggleFormButton" onclick="toggleForm()">Добавить отзыв</button>
 
-<!-- Форма для добавления комментария -->
 <div id="addEntryForm" style="display: none;">
     <h2>Добавить отзыв</h2>
     <form asp-action="Recent" method="post">
@@ -46,7 +41,6 @@
     </form>
 </div>
 
-<!-- Всплывающее сообщение -->
 <div id="successMessage" style="display: none; position: fixed; top: 20px; right: 20px; background: #4CAF50; color: white; padding: 10px; border-radius: 5px;">
     Комментарий добавлен
 </div>
@@ -54,9 +48,7 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 
-    <!-- JavaScript для управления формой, модальным окном и всплывающим сообщением -->
     <script>
-        // Показ/скрытие формы
         function toggleForm() {
             var form = document.getElementById("addEntryForm");
             var button = document.getElementById("toggleFormButton");
@@ -69,19 +61,16 @@
             }
         }
 
-        // Показ модального окна со всеми комментариями
         function showAllComments() {
             var modal = document.getElementById("commentsModal");
             modal.style.display = "block";
         }
 
-        // Закрытие модального окна
         function closeCommentsModal() {
             var modal = document.getElementById("commentsModal");
             modal.style.display = "none";
         }
 
-        // Показ всплывающего сообщения
         window.onload = function () {
         @if (TempData["ShowSuccessMessage"] != null && (bool)TempData["ShowSuccessMessage"])
         {
